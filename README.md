@@ -1,6 +1,9 @@
 # zenshin-API
 
 The API response for an anime includes details of each episode, covering both main and special episodes available on AniDb. Each episode is mapped to its equivalent episode on Tvdb, along with IDs for various anime websites.
+Data is typically updated every two days.
+
+Currently 8200+ anime exist in the DB with 125426+ regular anime episodes in total.
 
 ### Example: Ao no hako / Blue Box
 ```
