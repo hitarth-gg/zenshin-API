@@ -1,5 +1,7 @@
 # zenshin-API
 
+The API response for an anime includes details of each episode, covering both main and special episodes available on AniDb. Each episode is mapped to its equivalent episode on Tvdb, along with IDs for various anime websites.
+
 ### Example: Ao no hako / Blue Box
 ```
 https://zenshin-supabase-api.onrender.com/mappings?mal_id=57181
