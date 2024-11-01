@@ -1,5 +1,7 @@
 # zenshin-API
 
+![zenshin banner github](https://github.com/user-attachments/assets/54a37351-b064-4749-a4b5-7fb19ce86ceb)
+
 The API response for an anime includes details of each episode, covering both main and special episodes available on AniDb. Each episode is mapped to its equivalent episode on Tvdb, along with IDs for various anime websites.
 Data is typically updated every two days.
 
