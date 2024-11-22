@@ -2,6 +2,10 @@
 
 ![zenshin banner github](https://github.com/user-attachments/assets/54a37351-b064-4749-a4b5-7fb19ce86ceb)
 
+![Uptime Robot status](https://img.shields.io/uptimerobot/status/m797855031-11584f828349d25ea1ac5e61)
+![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m797855031-11584f828349d25ea1ac5e61)
+
+
 The API response for an anime includes details of each episode, covering both main and special episodes available on AniDb. Each episode is mapped to its equivalent episode on Tvdb, along with IDs for various anime websites.
 Data is typically updated every two days.
 
