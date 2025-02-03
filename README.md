@@ -231,3 +231,8 @@ https://zenshin-supabase-api.onrender.com/mappings?anidb_id=18278
   }
 }
 ```
+### Mapping Information is taken from the following resources:
+- [Fribb/anime-lists](https://github.com/Fribb/anime-lists)
+- [Anime-Lists/anime-lists](https://github.com/Anime-Lists/anime-lists)
+- [TheTVDB](https://thetvdb.com/)
+- [aniDB](https://anidb.net/)
