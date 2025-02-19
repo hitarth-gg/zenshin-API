@@ -13,10 +13,10 @@ Currently 8200+ anime exist in the DB with 125426+ regular anime episodes in tot
 
 ### Example: Ao no hako / Blue Box
 ```
-https://zenshin-supabase-api.onrender.com/mappings?mal_id=57181
-https://zenshin-supabase-api.onrender.com/mappings?anilist_id=170942
-https://zenshin-supabase-api.onrender.com/mappings?thetvdb_id=429934
-https://zenshin-supabase-api.onrender.com/mappings?anidb_id=18278
+https://zenshin-supabase-api-myig.onrender.com/mappings?mal_id=57181
+https://zenshin-supabase-api-myig.onrender.com/mappings?anilist_id=170942
+https://zenshin-supabase-api-myig.onrender.com/mappings?thetvdb_id=429934
+https://zenshin-supabase-api-myig.onrender.com/mappings?anidb_id=18278
 ```
 **Response:**
 ```json
