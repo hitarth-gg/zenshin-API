@@ -7,6 +7,11 @@
 ![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m797855031-11584f828349d25ea1ac5e61?style=flat-square&label=uptime%20(7%20days))
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m797855031-11584f828349d25ea1ac5e61?style=flat-square&label=uptime%20(30%20days))
 
+```
+Base Urls
+https://zenshin-supabase-api-myig.onrender.com/
+https://zenshin-supabase-api.onrender.com/
+```
 
 
 The API response for an anime includes details of each episode, covering both main and special episodes available on AniDb. Each episode is mapped to its equivalent episode on Tvdb, along with IDs for various anime websites.
@@ -16,10 +21,10 @@ Currently 8200+ anime exist in the DB with 125426+ regular anime episodes in tot
 
 ### Example: Ao no hako / Blue Box
 ```
-https://zenshin-supabase-api-myig.onrender.com/mappings?mal_id=57181
-https://zenshin-supabase-api-myig.onrender.com/mappings?anilist_id=170942
-https://zenshin-supabase-api-myig.onrender.com/mappings?thetvdb_id=429934
-https://zenshin-supabase-api-myig.onrender.com/mappings?anidb_id=18278
+https://zenshin-supabase-api.onrender.com/mappings?mal_id=57181
+https://zenshin-supabase-api.onrender.com/mappings?anilist_id=170942
+https://zenshin-supabase-api.onrender.com/mappings?thetvdb_id=429934
+https://zenshin-supabase-api.onrender.com/mappings?anidb_id=18278
 ```
 **Response:**
 ```json
