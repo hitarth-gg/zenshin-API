@@ -1,5 +1,4 @@
 # zenshin-API
-# _NOTE_: URL has been changed to : https://zenshin-supabase-api-myig.onrender.com/
 ![zenshin banner github](https://github.com/user-attachments/assets/54a37351-b064-4749-a4b5-7fb19ce86ceb)
 
 
