@@ -9,7 +9,7 @@
 ![Static Badge](https://img.shields.io/badge/Status%20Page%20-%20%238c37dc?style=flat-square&link=https%3A%2F%2F3gdmfb5z.status.cron-job.org%2F)
 </a>
 
-#### [API 1](https://zenshin-supabase-api-myig.onrender.com/mappings?mal_id=57181):
+#### [API 2](https://zenshin-supabase-api-myig.onrender.com/mappings?mal_id=57181):
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m797855031-11584f828349d25ea1ac5e61?style=flat-square)
 ![Uptime Robot ratio (7 days)](https://img.shields.io/uptimerobot/ratio/7/m797855031-11584f828349d25ea1ac5e61?style=flat-square&label=uptime%20(7%20days))
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m797855031-11584f828349d25ea1ac5e61?style=flat-square&label=uptime%20(30%20days))
