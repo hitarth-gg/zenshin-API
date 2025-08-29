@@ -1,0 +1,48 @@
+# .github/workflows/restore.yml (snippet)
+name: Restore dump to Supabase
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "zenshin_backup.dump"
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Postgres client
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
+
+      - name: Restore dump to Supabase
+        env:
+          SUPABASE_CONN: ${{ secrets.SUPABASE_CONNECTION }}
+          PGSSLMODE: require
+        run: |
+          echo "Dropping store table..."
+          psql "$SUPABASE_CONN" -c "DROP TABLE IF EXISTS public.store CASCADE;"
+          if [ $? -ne 0 ]; then
+            echo "Error dropping table. Exiting..."
+            exit 1
+          fi
+
+          echo "Restoring schema (schema-only)..."
+          pg_restore --no-owner --no-privileges -s -d "$SUPABASE_CONN" zenshin_backup.dump
+          if [ $? -ne 0 ]; then
+            echo "Error restoring schema. Exiting..."
+            exit 1
+          fi
+
+          echo "Restoring data (data-only)..."
+          pg_restore --no-owner --no-privileges -a -d "$SUPABASE_CONN" zenshin_backup.dump
+          if [ $? -ne 0 ]; then
+            echo "Error restoring data. Exiting..."
+            exit 1
+          fi
+
+          echo "Restore complete."
