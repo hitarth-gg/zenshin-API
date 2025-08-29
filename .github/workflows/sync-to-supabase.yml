@@ -49,7 +49,7 @@ jobs:
           fi
 
           echo "Restoring schema (schema-only)..."
-          psql "$SUPABASE_CONN" -f zenshin_sql.sql
+          psql "$SUPABASE_CONN" -f zenshin_sql
           if [ $? -ne 0 ]; then
             echo "Error restoring schema. Exiting..."
             exit 1
