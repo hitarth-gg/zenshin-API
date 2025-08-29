@@ -4,9 +4,9 @@ name: Restore dump to Supabase
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [workflow]
     paths:
-      - "zenshin_backup.dump"
+      - "zenshin_pg16_backup.dump"
 
 jobs:
   restore:
@@ -14,10 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Postgres client (v17)
+      - name: Install Postgres client
+        run: sudo apt-get install postgresql-client
+
+      - name: Verify dump file exists
         run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client-17
+          if [ ! -f zenshin_pg16_backup.dump ]; then
+            echo "Dump file not found!"
+            exit 1
+          fi
+          echo "Dump file found."
+
+      - name: Check pg_restore version
+        run: pg_restore --version
 
       - name: Restore dump to Supabase
         env:
@@ -32,14 +41,14 @@ jobs:
           fi
 
           echo "Restoring schema (schema-only)..."
-          pg_restore --no-owner --no-privileges -s -d "$SUPABASE_CONN" zenshin_backup.dump
+          pg_restore --no-owner --no-privileges -s -d "$SUPABASE_CONN" zenshin_pg16_backup.dump
           if [ $? -ne 0 ]; then
             echo "Error restoring schema. Exiting..."
             exit 1
           fi
 
           echo "Restoring data (data-only)..."
-          pg_restore --no-owner --no-privileges -a -d "$SUPABASE_CONN" zenshin_backup.dump
+          pg_restore --no-owner --no-privileges -a -d "$SUPABASE_CONN" zenshin_pg16_backup.dump
           if [ $? -ne 0 ]; then
             echo "Error restoring data. Exiting..."
             exit 1
