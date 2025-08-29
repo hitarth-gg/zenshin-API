@@ -3,7 +3,7 @@ name: Restore dump to Supabase
 on:
   workflow_dispatch:
   push:
-    branches: [workflow]
+    branches: [main]
     paths:
       - "zenshin_sql.sql"
 
