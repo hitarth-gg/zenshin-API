@@ -6,7 +6,7 @@ on:
   push:
     branches: [workflow]
     paths:
-      - "zenshin_pg16_backup.dump"
+      - "zenshin_sql.sql"
 
 jobs:
   restore:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Verify dump file exists
         run: |
-          if [ ! -f zenshin_pg16_backup.dump ]; then
+          if [ ! -f zenshin_sql.sql ]; then
             echo "Dump file not found!"
             exit 1
           fi
@@ -41,16 +41,9 @@ jobs:
           fi
 
           echo "Restoring schema (schema-only)..."
-          pg_restore --no-owner --no-privileges -s -d "$SUPABASE_CONN" zenshin_pg16_backup.dump
+          psql "$SUPABASE_CONN" -f zenshin_sql.sql
           if [ $? -ne 0 ]; then
             echo "Error restoring schema. Exiting..."
-            exit 1
-          fi
-
-          echo "Restoring data (data-only)..."
-          pg_restore --no-owner --no-privileges -a -d "$SUPABASE_CONN" zenshin_pg16_backup.dump
-          if [ $? -ne 0 ]; then
-            echo "Error restoring data. Exiting..."
             exit 1
           fi
 
