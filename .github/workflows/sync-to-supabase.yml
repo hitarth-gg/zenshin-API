@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "zenshin_sql.sql"
+      - "zenshin_sql.gz"
 
 jobs:
   restore:
@@ -18,11 +18,20 @@ jobs:
 
       - name: Verify dump file exists
         run: |
-          if [ ! -f zenshin_sql.sql ]; then
+          if [ ! -f zenshin_sql.gz ]; then
             echo "Dump file not found!"
             exit 1
           fi
           echo "Dump file found."
+
+      - name: Decompress dump
+        run: |
+          gzip -d -k zenshin_sql.gz
+          if [ ! -f zenshin_sql ]; then
+            echo "Decompression failed!"
+            exit 1
+          fi
+          echo "Decompression successful."
 
       - name: Check pg_restore version
         run: pg_restore --version
