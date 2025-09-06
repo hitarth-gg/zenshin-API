@@ -1,7 +1,7 @@
 # zenshin-API
 ![zenshin banner github](https://github.com/user-attachments/assets/54a37351-b064-4749-a4b5-7fb19ce86ceb)
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/hitarth-gg/zenshin-api/sync-to-supabase.yml?style=flat-square&logo=githubactions&logoColor=white&label=supabase%20sync)
+[![Restore dump to Supabase](https://github.com/hitarth-gg/zenshin-API/actions/workflows/sync-to-supabase.yml/badge.svg)](https://github.com/hitarth-gg/zenshin-API/actions/workflows/sync-to-supabase.yml)
 
 #### [API 1](https://zenshin-supabase-api.onrender.com/mappings?mal_id=57181):
 ![Uptime Robot status](https://img.shields.io/uptimerobot/status/m798681247-162121a0d2d612a438e9c8eb?style=flat-square)
