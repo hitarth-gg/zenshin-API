@@ -1,6 +1,12 @@
 # zenshin-API
 ![zenshin banner github](https://github.com/user-attachments/assets/54a37351-b064-4749-a4b5-7fb19ce86ceb)
 
+> [!CAUTION]
+> The egress usage has exceeded 5 GB, which is the free limit provided by Supabase. If it goes beyond that, I will no longer be able to keep the APIs running. Please do not use this in extremely popular projects. The data dump is provided for a reason, host your own databases and create your own APIs instead.
+<img width="1216" height="559" alt="image" src="https://github.com/user-attachments/assets/62fc1a03-e6a4-4026-a398-b0925bb28950" />
+
+
+
 [![Restore dump to Supabase](https://github.com/hitarth-gg/zenshin-API/actions/workflows/sync-to-supabase.yml/badge.svg)](https://github.com/hitarth-gg/zenshin-API/actions/workflows/sync-to-supabase.yml)
 
 #### [API 1](https://zenshin-supabase-api.onrender.com/mappings?mal_id=57181):
