@@ -2,7 +2,9 @@
 ![zenshin banner github](https://github.com/user-attachments/assets/54a37351-b064-4749-a4b5-7fb19ce86ceb)
 
 > [!CAUTION]
-> The egress usage has exceeded 5 GB, which is the free limit provided by Supabase. If it goes beyond that, I will no longer be able to keep the APIs running. Please do not use this in extremely popular projects. The data dump is provided for a reason, host your own databases and create your own APIs instead.
+> The egress usage has exceeded 5 GB, which is the free limit provided by Supabase. If it goes beyond that, I will no longer be able to keep the APIs running. Please do not use this in extremely popular projects. The data dump is provided for a reason, host your own databases and create your own APIs instead. 
+>
+> Please optimize your React app so it doesn’t make a gazillion API calls for the same ID every time the page loads. Caching exists for a reason, unless your vibe-coded masterpiece was specifically designed to DDoS my backend to oblivion.
 <img width="1216" height="559" alt="image" src="https://github.com/user-attachments/assets/62fc1a03-e6a4-4026-a398-b0925bb28950" />
 
 
