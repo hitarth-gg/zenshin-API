@@ -56,3 +56,31 @@ jobs:
           fi
 
           echo "Restore complete."
+      - name: Clear mappings server caches
+        env:
+          ADMIN_KEY: ${{ secrets.CACHE_ADMIN_KEY }}
+          SERVER_URL_1: ${{ secrets.MAPPINGS_SERVER_URL_1 }}
+          SERVER_URL_2: ${{ secrets.MAPPINGS_SERVER_URL_2 }}
+        run: |
+          failed=0
+          for url in "$SERVER_URL_1" "$SERVER_URL_2"; do
+            echo "Clearing cache on $url..."
+            http_status=$(curl -s -o /tmp/response.json -w "%{http_code}" \
+              -X DELETE "$url/cache/all" \
+              -H "x-admin-key: $ADMIN_KEY")
+
+            echo "Response from $url:"
+            cat /tmp/response.json
+            echo ""
+
+            if [ "$http_status" -ne 200 ]; then
+              echo "Cache clear failed for $url with status $http_status"
+              failed=1
+            else
+              echo "Cache cleared successfully on $url."
+            fi
+          done
+
+          if [ "$failed" -ne 0 ]; then
+            exit 1
+          fi
